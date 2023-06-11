@@ -46,12 +46,13 @@ RUN \
 	rm -rf /tmp/* /tmp/.[!.]*
 
 # Add files
+RUN chmod +x rootfs/startapp.sh
+RUN chmod +x rootfs/etc/cont-init.d/tartube.sh
 COPY rootfs/ /
 	
 # Set environment variables.
 RUN \
     set-cont-env APP_NAME "Tartube" && \
-    set-cont-env APP_VERSION "$TARTUBE_VERSION"
-	
+    set-cont-env APP_VERSION "$TARTUBE_VERSION"	
 # Define mountable directories.
 VOLUME ["/storage"]
