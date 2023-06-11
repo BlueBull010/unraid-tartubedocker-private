@@ -10,7 +10,7 @@ RUN \
 	install_app_icon.sh "$APP_ICON_URL"
 
 # Define download URLs.
-ARG TARTUBE_VERSION=2.4.221
+ARG TARTUBE_VERSION=2.4.386
 ARG TARTUBE_URL=https://github.com/axcore/tartube/releases/download/v${TARTUBE_VERSION}/python3-tartube_${TARTUBE_VERSION}.deb
 
 ### Install Tartube
